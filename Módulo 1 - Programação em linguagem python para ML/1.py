@@ -1,7 +1,6 @@
+
+
 # Escreva um programa que solicite ao usuário uma palçavra e verifique se ela é um palíndromo
-
-from time import sleep
-
 
 def isPalindromo(w: str):
     if w.lower() == w[::-1].lower():
@@ -10,7 +9,7 @@ def isPalindromo(w: str):
 
 
 word = input("Insira uma palavra: ")
-
+print()
 
 if isPalindromo(word):
     print("É palíndromo")
