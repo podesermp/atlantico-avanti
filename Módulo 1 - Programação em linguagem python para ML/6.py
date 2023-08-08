@@ -1,11 +1,24 @@
 
-# Escreva uma função que receba duas lista e retorne outra lista com elementos que estão presentes em apenas uma das listas
+# Escreva uma função que receba uma lista de números e retorne outra lista com os números primos presentes
 
-def differenceList(list1:list, list2:list):
-    dif1 = set(list1).difference(set(list2))
-    dif2 = set(list2).difference(set(list1))
-   
-    return sorted(list(dif1.union(dif2)))
+def isPrimo(num):
+
+    if num <= 1:
+        return False
+    
+    for i in range(2, num):
+        if (num % i == 0):
+            return False
+    return True
 
 
-print(differenceList([1,6,12,18,24,36,42,49,54,60], [1,9,18,27,36,45,54,63,72,81,90]))
+def getPrimos(lista: list):
+    primos = []
+    for num in lista:
+        if isPrimo(num):
+            primos.append(num)
+    
+    return primos
+
+
+print(getPrimos(range(0,100)))
